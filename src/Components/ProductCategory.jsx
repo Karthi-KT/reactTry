@@ -13,6 +13,7 @@ const ProductCategory = (category) => {
               {topic.category}
             </th>
           </tr>
+          <h1></h1>
         </table>
       </>
     );
