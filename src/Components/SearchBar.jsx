@@ -1,9 +1,9 @@
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import "../style.css";
-import MyContext from "../main";
+// import MyContext from "../main";
 
 const SearchBar = ({
-  onFilterVal,
+  filterVal,
   inStock,
   onFilterValChange,
   onInStockChange,
@@ -13,12 +13,14 @@ const SearchBar = ({
       <input
         type="text"
         placeholder="Search..."
+        value={filterVal}
         onChange={(e) => onFilterValChange(e.target.value)}
       />
       <label>
         <input
           type="checkbox"
-          onChange={(e) => onInStockChange(e.target.value)}
+          checked={inStock}
+          onChange={(e) => onInStockChange(e.target.checked)}
         />
         Show Only the items in stock
       </label>
@@ -26,6 +28,11 @@ const SearchBar = ({
   );
 };
 
-SearchBar.propTypes = {};
+SearchBar.propTypes = {
+  filterVal: PropTypes.string,
+  inStock: PropTypes.bool,
+  onFilterValChange: PropTypes.func,
+  onInStockChange: PropTypes.func,
+};
 
 export default SearchBar;

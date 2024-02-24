@@ -1,25 +1,20 @@
-// import PropTypes from 'prop-types'
-import { useContext } from "react";
-import MyContext from "../main";
+// // import PropTypes from 'prop-types'
+// import { useContext } from "react";
+// import MyContext from "../main";
 
-const ProductCategory = (category) => {
-  const topic = useContext(MyContext);
-  if (category !== null) {
-    return (
-      <>
-        <table>
-          <tr>
-            <th colSpan={"2"} key={{ category }}>
-              {topic.category}
-            </th>
-          </tr>
-          <h1></h1>
-        </table>
-      </>
-    );
-  } else return null;
-};
+// const ProductCategory = () => {
+//   const topic = useContext(MyContext);
+//   const topics = topic.map((item) => {
+//     if (item.category !== null) {
+//       <tr>
+//         <th colSpan="2">{item.category}</th>
+//       </tr>;
+//     }
+//   });
 
-ProductCategory.propTypes = {};
+//   return <>{topics}</>;
+// };
 
-export default ProductCategory;
+// ProductCategory.propTypes = {};
+
+// export default ProductCategory;

@@ -1,4 +1,4 @@
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { useState } from "react";
 
 import ProductList from "./ProductList";
@@ -11,20 +11,17 @@ const ProductTable = () => {
     <div>
       <SearchBar
         filterVal={filterVal}
-        inStock={inStock}
         onFilterValChange={setFilterVal}
+        inStock={inStock}
         onInStockChange={setinStock}
       ></SearchBar>
-      <ProductList
-        filterVal={filterVal}
-        inStock={inStock}
-        onFilterValChange={setFilterVal}
-        onInStockChange={setinStock}
-      ></ProductList>
+      <ProductList filterVal={filterVal} inStock={inStock}></ProductList>
     </div>
   );
 };
 
-ProductTable.propTypes = {};
+ProductTable.propTypes = {
+  inStock: PropTypes.bool,
+};
 
 export default ProductTable;
